@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Monoton&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+
+/*footer*/
+
+footer {
+    height: 120px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    text-align: center;
+    font-size: xx-large;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.floating-container {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    margin: 35px 25px;
+}
+
+.floating-container:hover {
+    height: 300px;
+}
+
+.floating-container:hover .floating-button {
+    box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+    transform: translatey(5px);
+    transition: all 0.3s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(1) {
+    animation: come-in 0.4s forwards 0.2s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(2) {
+    animation: come-in 0.4s forwards 0.4s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(3) {
+    animation: come-in 0.4s forwards 0.6s;
+}
+
+.floating-container .floating-button {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: #2cb3f0;
+    bottom: 0;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    line-height: 65px;
+    text-align: center;
+    font-size: 23px;
+    z-index: 100;
+    box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.floating-container .float-element {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 15px auto;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    z-index: 0;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.floating-container .float-element .material-icons {
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.floating-container .float-element:nth-child(1) {
+    background: #42A5F5;
+    box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
+}
+
+.floating-container .float-element:nth-child(2) {
+    background: #4CAF50;
+    box-shadow: 0 20px 20px -10px rgba(76, 175, 80, 0.5);
+}
+
+.floating-container .float-element:nth-child(3) {
+    background: #FF9800;
+    box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
+}
+
+@keyframes come-in {
+    0% {
+        -webkit-transform: translatey(100px);
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    30% {
+        -webkit-transform: translateX(-50px) scale(0.4);
+        transform: translateX(-50px) scale(0.4);
+    }
+    70% {
+        -webkit-transform: translateX(0px) scale(1.2);
+        transform: translateX(0px) scale(1.2);
+    }
+    100% {
+        -webkit-transform: translatey(0px) scale(1);
+        transform: translatey(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+
+/*_______index.html_________*/
+
+.main_accueil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 960px;
+}
+
+.gauche {
+    height: 960px;
+    width: 50%;
+}
+
+video#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*partie droite*/
+
+.droite {
+    height: 960px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.droite h1 {
+    text-align: center;
+    text-shadow: 1px 1px 4px;
+    font-size: 46px;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.droite p {
+    text-align: center;
+    font-size: 21px;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 69%
+}
+
+.droite button {
+    padding: 30px;
+    width: 230px;
+    background-color: black;
+    color: white;
+    border: 4px solid #fff;
+    border-radius: 12px;
+    font-size: x-large;
+    font-family: Montserrat, sans-serif;
+}
+
+
+/**/
+
+
+/*vue-plateau*/
+
+.main_plateau {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 960px;
+}
+
+.plateau {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 710px;
+    width: 100%;
+}
+
+.ordi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+}
+
+.centre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+}
+
+.centre #newGameBtn {
+    width: 120px;
+    height: 90px;
+    border-radius: 10px;
+    border: 3px solid #FFF;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 4px #fff;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.joueur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+}
+
+.score h2 {
+    font-family: 'Inter';
+    color: #fff;
+    text-transform: uppercase;
+    font-size: xx-large;
+    text-shadow: 0 0 54px rgba(202, 228, 225, 1);
+    font-weight: 200;
+}
+
+.joueur h2 {
+    font-family: 'Monoton', cursive;
+    color: #ff9800;
+    font-size: xx-large;
+    text-shadow: 0 0 54px rgba(202, 228, 225, 1);
+    font-weight: 200;
+    height: 20%;
+}
+
+.ordi h2 {
+    font-family: 'Monoton', cursive;
+    color: #c6e2ff;
+    font-size: xx-large;
+    text-shadow: 0 0 54px rgba(202, 228, 225, 1);
+    font-weight: 200;
+    height: 20%;
+}
+
+#player_score {
+    color: #ff9800;
+    text-shadow: 0 0 6px rgba(255, 152, 0, 0.5), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(194, 100, 191, 0.30), 0 0 21px #ff9800, 0 0 34px #ff9800, 0 0 54px rgba(255, 152, 0, 0.5);
+    font-size: xx-large;
+    padding: 10px;
+}
+
+#computer_score {
+    color: #c6e2ff;
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+    font-size: xx-large;
+    padding: 10px;
+}
+
+.joueur img,
+.ordi img {
+    width: 100%;
+    object-fit: cover;
+    height: 80%;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#round {
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(255, 255, 255, 0.52), 0 0 21px rgba(253, 254, 255, 0.92), 0 0 34px rgba(243, 245, 247, 0.78), 0 0 54px rgba(242, 244, 247, 0.92);
+    font-size: xx-large;
+    padding: 10px;
+}
+
+
+/*bouton joueur*/
+
+.btn_play {
+    height: 250px;
+    background: #1414145c;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_play button {
+    background: none;
+    border: none;
+    margin: 15px;
+    box-shadow: 0px 0px 3px #fff;
+}
+
+.btn_play img {
+    width: 150px;
+}
+
+
+/*vue-contact*/
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.gauche_contact {
+    height: 960px;
+    width: 50%;
+}
+
+.droite_contact h2 {
+    display: block;
+    margin-top: -0.5rem;
+    font-size: 2.1rem;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    -webkit-text-stroke: #fff 0.1rem;
+    letter-spacing: 0.2rem;
+    color: transparent;
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    animation: flickering 2s linear infinite both;
+    animation-duration: 1.5s;
+    overflow: hidden;
+    transition: .12s;
+}
+
+@keyframes flickering {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    41.99% {
+        opacity: 1;
+    }
+    42% {
+        opacity: 0;
+    }
+    43% {
+        opacity: 0;
+    }
+    43.01% {
+        opacity: 1;
+    }
+    47.99% {
+        opacity: 1;
+    }
+    48% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    49.01% {
+        opacity: 1;
+    }
+}
+
+.droite_contact {
+    height: 960px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.droite_contact p {
+    text-align: center;
+    font-size: 21px;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 69%
+}
+
+.droite_contact button {
+    padding: 30px;
+    width: 230px;
+    background-color: black;
+    color: white;
+    border: 4px solid #fff;
+    border-radius: 12px;
+    font-size: x-large;
+    font-family: Montserrat, sans-serif;
+}
+
+input#email,
+input#sujet {
+    width: 520px;
+    height: 30px;
+}
+
+textarea#message {
+    height: 120px;
+}
+
+.container_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 660px;
+    width: 550px;
+    padding: 12px;
+    align-items: center;
+    box-shadow: 1px 1px 9px 3px white;
+}
+
+.name_card {
+    display: flex;
+    flex-direction: row;
+    width: 550px;
+}
+
+label {
+    padding: 10px;
+}
+
+.content_card {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 767px) {
+    /*general*/
+    .floating-container {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        bottom: 0;
+        right: 0;
+        margin: 28px 12px;
+    }
+    .floating-container .floating-button {
+        margin-left: 35px;
+    }
+    footer {
+        height: 160px;
+    }
+    footer p {
+        text-align: center;
+        ;
+        font-size: medium;
+    }
+    /*_______index.html_________*/
+    .main_accueil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 1070px;
+    }
+    .gauche {
+        height: 360px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .droite {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .droite p,
+    .droite_contact p {
+        font-size: 17px;
+        width: 77%
+    }
+    .droite button {
+        padding: 20px;
+    }
+    /*vue-plateau.html_________*/
+    .main_plateau {
+        height: 1060px;
+    }
+    .plateau {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 710px;
+        width: 100%;
+    }
+    .ordi,
+    .joueur {
+        width: 100%;
+        flex-direction: row;
+    }
+    .ordi p,
+    .joueur p {
+        width: 50%;
+    }
+    .centre {
+        width: 100%;
+        flex-direction: row;
+        height: 120px;
+    }
+    .centre #newGameBtn {
+        width: auto;
+        height: auto;
+        text-align: center;
+        font-size: 20px;
+    }
+    .btn_play button {
+        margin: 0;
+    }
+    .btn_play img {
+        width: 100px;
+    }
+    /*vue-contact .html*/
+    form#contactForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact {
+        flex-direction: column;
+    }
+    .gauche_contact {
+        width: 100%;
+        height: 120px;
+        ;
+    }
+    .droite_contact {
+        width: 100%;
+    }
+    .droite_contact h2 {
+        font-size: x-large;
+    }
+    .container_contact {
+        width: min-content;
+    }
+    .name_card {
+        flex-direction: column;
+        width: auto;
+    }
+    input#email,
+    input#sujet {
+        width: auto;
+        height: auto;
+    }
+}

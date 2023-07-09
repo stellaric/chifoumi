@@ -5,13 +5,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="src/img/logo_chifoumi.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Chifoumi</title>
 </head>
 
 <body>
-    <header></header>
-    <main></main>
-    <footer>Ceci est un footer</footer>
+    <header>
+        <div class="floating-container">
+            <div class="floating-button">+</div>
+            <div class="element-container">
+
+                <a href="google.com"> <span class="float-element tooltip-left">
+                <i class="material-icons">phone
+                </i></a>
+              </span>
+                    <span class="float-element">
+                <i class="material-icons">email
+          </i>
+              </span>
+                    <span class="float-element">
+                <i class="material-icons">chat</i>
+              </span>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="main_accueil">
+
+            <section class="gauche">
+                <video id="background-video" autoplay loop muted>
+                    <source src="src/video/chifoumi.mp4" type="video/mp4">
+                    </video>
+            </section>
+
+            <section class="droite">
+
+                <h1>Régle du jeu</h1>
+                <p>Le jeu de "Chifoumi", également connu sous le nom de "Pierre-Papier-Ciseaux", est un jeu simple où deux joueurs choisissent l'une des trois options : pierre, papier ou ciseaux.
+                    <br><br> Voici les règles de base du jeu :
+                    <br><br>La pierre bat les ciseaux , si un joueur choisit la pierre et l'autre les ciseaux, la pierre gagne car elle émousse les ciseaux et les brise.
+                    <br><br> Le papier bat la pierre ,si un joueur choisit le papier et l'autre la pierre, le papier gagne car il enveloppe la pierre et la recouvre.
+                    <br><br> Les ciseaux battent le papier ,si un joueur choisit les ciseaux et l'autre le papier, les ciseaux gagnent car ils coupent le papier.
+                    <br><br>Si les deux joueurs choisissent la même option, c'est un match nul et le jeu peut être rejoué.
+                </p>
+
+                <form action="vues/vue-plateau.html" method="GET">
+                    <button type="submit">Commencer</button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <!-- Pied de page -->
+        <p>© 2023 Stella. Tous droits réservés.</p>
+    </footer>
+
+    <div class="script">
+        <script src="assets/js/script.js"></script>
+        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    </div>
 </body>
 
 </html>

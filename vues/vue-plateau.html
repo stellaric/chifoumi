@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../src/img/logo_chifoumi.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Chifoumi</title>
+</head>
+
+<body>
+    <header>
+        <div class="floating-container">
+            <div class="floating-button">+</div>
+            <div class="element-container">
+
+                <a href="google.com"> <span class="float-element tooltip-left">
+                <i class="material-icons">phone
+                </i></a>
+              </span>
+                    <span class="float-element">
+                <i class="material-icons">email
+          </i>
+              </span>
+                    <span class="float-element">
+                <i class="material-icons">chat</i>
+              </span>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="main_plateau">
+
+
+            <section class="plateau">
+                <div class="ordi">
+                    <h2>Ordinateur </h2>
+                    <img id="computerImage" src="../src/img/ciseau_3d.jpg" alt="ciseau" />
+
+                </div>
+
+                <div class="centre">
+
+                    <div class="score">
+                        <h2>Round</h2>
+                        <p id="round">0</p>
+                        <p id="result"> joueur a gagné</p>
+                    </div>
+                    <div id="scoreboard">
+                        <span id="computer_score"> 0</span>
+                        <span id="player_score"> 0</span>
+                    </div>
+
+                    <button id="newGameBtn" onclick="startNewGame()">New</button>
+                    <audio id="newSound">
+                        <source src="../src/son/son_new.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+
+                <div class="joueur">
+                    <h2>Joueur</h2>
+                    <img id="playerImage" src="../src/img/ciseau_3d.jpg" alt="ciseau" />
+                </div>
+            </section>
+
+
+            <section>
+                <div class="btn_play" id="game">
+                    <button type="submit" id="ciseauBtn" onclick="play('ciseau')"><img id="playerImage" src="../src/img/main/ciseau.png" alt="" srcset=""/> </button>
+                    <button type="submit" id="pierreBtn" onclick="play('pierre')"><img id="playerImage" src="../src/img/main/pierre.png" alt="" srcset=""/> </button>
+                    <button type="submit" id="feuilleBtn" onclick="play('feuille')"><img  id="playerImage" src="../src/img/main/feuille.png" alt="" srcset=""/> </button>
+
+
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+
+
+    <footer>
+        <!-- Pied de page -->
+        <p>© 2023 Stella. Tous droits réservés.</p>
+    </footer>
+
+
+    <script src="../assets/js/script.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+</body>
+
+</html>
