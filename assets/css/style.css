@@ -334,6 +334,16 @@ video#background-video {
     padding: 10px;
 }
 
+p#winner {
+    color: #ffffff;
+    font-size: x-large;
+    text-shadow: 0px 1px 2px white;
+}
+
+h3#result {
+    color: #ffff0082;
+}
+
 
 /*bouton joueur*/
 
@@ -359,6 +369,13 @@ video#background-video {
 
 
 /*vue-contact*/
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .contact {
     display: flex;
@@ -576,7 +593,7 @@ label {
         width: 100px;
     }
     /*vue-contact .html*/
-    form#contactForm {
+    #contactForm {
         display: flex;
         flex-direction: column;
         justify-content: center;
