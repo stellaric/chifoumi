@@ -336,10 +336,12 @@ p#winner {
     color: #ffffff;
     font-size: x-large;
     text-shadow: 0px 1px 2px white;
+    text-align: center;
 }
 
 h3#result {
     color: #ffff0082;
+    text-align: center;
 }
 
 
@@ -513,8 +515,13 @@ label {
         margin: 28px 12px;
     }
     .floating-container .floating-button {
-        margin-left: 35px;
+        margin-left: 45px;
+        margin-bottom: -29px;
     }
+    .floating-container .float-element:nth-child(1) {
+        margin-left: 45px;
+    }
+    /*footer*/
     footer {
         height: 160px;
     }
@@ -555,19 +562,32 @@ label {
     }
     /*vue-plateau.html_________*/
     .main_plateau {
-        height: 1060px;
+        height: 586px;
     }
     .plateau {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 710px;
+        height: 100%;
         width: 100%;
+    }
+    .ordi h2,
+    .ordi img {
+        font-size: x-large;
+        width: 50%;
+        text-align: center;
+    }
+    .joueur h2,
+    .joueur img {
+        font-size: x-large;
+        width: 50%;
+        text-align: center;
     }
     .ordi,
     .joueur {
         width: 100%;
         flex-direction: row;
+        height: 212px;
     }
     .ordi p,
     .joueur p {
@@ -583,6 +603,26 @@ label {
         height: auto;
         text-align: center;
         font-size: 20px;
+    }
+    .score h2 {
+        font-size: medium;
+    }
+    p#round {
+        font-size: x-large;
+        padding: 0px;
+    }
+    p#winner {
+        font-size: medium;
+    }
+    #scoreboard {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn_play {
+        height: 90px;
+    }
+    .main_plateau {
+        height: 586px;
     }
     .btn_play button {
         margin: 0;
