@@ -11,64 +11,75 @@
     <title>Chifoumi</title>
 </head>
 
-<body>
-    <!--header-->
-    <header>
+
+<body onload="loader()">
+    <div id="loader">
+        <video id="loader-video" autoplay loop muted>
+            <source src="../../src/video/fd_loading.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    <div id="myDiv">
+        <!--header-->
+        <header>
 
 
-        <div class="header">
-            <!---FAB (floating button)-->
-            <div class="floating-container">
-                <div class="floating-button">+</div>
-                <div class="element-container">
+            <div class="header">
+                <!---FAB (floating button)-->
+                <div class="floating-container">
+                    <div class="floating-button">+</div>
+                    <div class="element-container">
 
-                    <a href="vues/vue-contact.html">
-                        <span class="float-element">      
+                        <a href="vues/vue-contact.html">
+                            <span class="float-element">      
         <i class="material-icons"  >email</i>
            </a> 
         </span>
-                        <a href="vues/vue-plateau.html">
-                            <span class="float-element">
+                            <a href="vues/vue-plateau.html">
+                                <span class="float-element">
                     <i class="material-icons">casino</i>
                 </a>  
             </span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <!---->
-    <main>
-        <div class="main_accueil">
+        </header>
+        <!---->
+        <main>
+            <div class="main_accueil">
 
-            <section class="gauche">
-                <video id="background-video" autoplay loop muted>
+                <section class="gauche">
+                    <video id="background-video" autoplay loop muted>
                     <source src="src/video/chifoumi.mp4" type="video/mp4">
                     </video>
-            </section>
+                </section>
 
-            <section class="droite">
+                <section class="droite">
 
-                <h1>Régle du jeu</h1>
-                <p>Le jeu de "Chifoumi", également connu sous le nom de "Pierre-Papier-Ciseaux", est un jeu simple où deux joueurs choisissent l'une des trois options : pierre, papier ou ciseaux.
-                    <br><br> Voici les règles de base du jeu :
-                    <br><br>La pierre bat les ciseaux , si un joueur choisit la pierre et l'autre les ciseaux, la pierre gagne car elle émousse les ciseaux et les brise.
-                    <br><br> Le papier bat la pierre ,si un joueur choisit le papier et l'autre la pierre, le papier gagne car il enveloppe la pierre et la recouvre.
-                    <br><br> Les ciseaux battent le papier ,si un joueur choisit les ciseaux et l'autre le papier, les ciseaux gagnent car ils coupent le papier.
-                    <br><br>Si les deux joueurs choisissent la même option, c'est un match nul et le jeu peut être rejoué.
-                </p>
+                    <h1>Régle du jeu</h1>
+                    <p>Le jeu de "Chifoumi", également connu sous le nom de "Pierre-Papier-Ciseaux", est un jeu simple où deux joueurs choisissent l'une des trois options : pierre, papier ou ciseaux.
+                        <br><br> Voici les règles de base du jeu :
+                        <br><br>La pierre bat les ciseaux , si un joueur choisit la pierre et l'autre les ciseaux, la pierre gagne car elle émousse les ciseaux et les brise.
+                        <br><br> Le papier bat la pierre ,si un joueur choisit le papier et l'autre la pierre, le papier gagne car il enveloppe la pierre et la recouvre.
+                        <br><br> Les ciseaux battent le papier ,si un joueur choisit les ciseaux et l'autre le papier, les ciseaux gagnent car ils coupent le papier.
+                        <br><br>Si les deux joueurs choisissent la même option, c'est un match nul et le jeu peut être rejoué.
+                    </p>
 
-                <form action="vues/vue-plateau.html" method="GET">
-                    <button type="submit">Commencer</button>
-                </form>
-            </section>
+                    <form action="vues/vue-plateau.html" method="GET">
+                        <button type="submit">Commencer</button>
+                    </form>
+                    <br>
+                    <a href="../../index.html">Retour sur GameStore</a>
+                </section>
 
-        </div>
-    </main>
+            </div>
+        </main>
 
-    <footer>
-        <!-- Pied de page -->
-        <p>© 2023 Stella. Tous droits réservés.</p>
-    </footer>
+        <footer>
+            <!-- Pied de page -->
+            <p>© 2023 Stella. Tous droits réservés.</p>
+        </footer>
+    </div>
 
     <div class="script">
         <script src="assets/js/script.js"></script>

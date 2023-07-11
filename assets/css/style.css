@@ -33,6 +33,9 @@ footer p {
     text-transform: capitalize;
 }
 
+
+/*FAB*/
+
 .floating-container {
     position: fixed;
     width: 100px;
@@ -43,7 +46,7 @@ footer p {
 }
 
 .floating-container:hover {
-    height: 300px;
+    height: 200px;
 }
 
 .floating-container:hover .floating-button {
@@ -60,27 +63,20 @@ footer p {
     animation: come-in 0.4s forwards 0.4s;
 }
 
-.floating-container:hover .element-container .float-element:nth-child(3) {
-    animation: come-in 0.4s forwards 0.6s;
-}
-
 .floating-container .floating-button {
     position: absolute;
     width: 65px;
     height: 65px;
-    background: #2cb3f0;
+    background: #d28ee4;
     bottom: 0;
     border-radius: 50%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    color: white;
     line-height: 65px;
     text-align: center;
     font-size: 23px;
     z-index: 100;
-    box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
-    cursor: pointer;
+    box-shadow: 0 10px 25px -5px rgba(106, 29, 194, 0.6);
+    cursor: url('../../src/img/icon/cursor.png'), pointer;
+    margin-left: 35px;
     transition: all 0.3s;
 }
 
@@ -90,13 +86,13 @@ footer p {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    margin: 15px auto;
+    margin: 10px auto;
     color: white;
     font-weight: 500;
     text-align: center;
     line-height: 50px;
-    z-index: 0;
     opacity: 0;
+    z-index: 0;
     transform: translateY(100px);
 }
 
@@ -111,13 +107,8 @@ footer p {
 }
 
 .floating-container .float-element:nth-child(2) {
-    background: #4CAF50;
-    box-shadow: 0 20px 20px -10px rgba(76, 175, 80, 0.5);
-}
-
-.floating-container .float-element:nth-child(3) {
-    background: #FF9800;
-    box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
+    background: #ca44d6;
+    box-shadow: 0 20px 20px -10px rgba(175, 76, 175, 0.5);
 }
 
 @keyframes come-in {
@@ -205,6 +196,13 @@ video#background-video {
     border-radius: 12px;
     font-size: x-large;
     font-family: Montserrat, sans-serif;
+}
+
+.droite a {
+    color: rgb(75, 188, 223);
+    font-size: x-large;
+    text-decoration: none;
+    text-shadow: 0 0 4px rgb(75, 188, 223);
 }
 
 
